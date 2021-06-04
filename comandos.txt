@@ -1,0 +1,377 @@
+Last login: Thu Jun  3 18:14:06 on ttys000
+Gustavos-MacBook-Pro:~ Gustavo$ cd DE
+-bash: cd: DE: No such file or directory
+Gustavos-MacBook-Pro:~ Gustavo$ cd D
+-bash: cd: D: No such file or directory
+Gustavos-MacBook-Pro:~ Gustavo$ cd Desktop/
+Gustavos-MacBook-Pro:Desktop Gustavo$ ls
+IDLE
+Microsoft Excel
+Screen Shot 2021-05-15 at 2.00.22 PM.png
+Visual Studio Code.app
+test
+Gustavos-MacBook-Pro:Desktop Gustavo$ mkdir test
+mkdir: test: File exists
+Gustavos-MacBook-Pro:Desktop Gustavo$ vi index.html
+Gustavos-MacBook-Pro:Desktop Gustavo$ cd test
+Gustavos-MacBook-Pro:test Gustavo$ vi index.html
+Gustavos-MacBook-Pro:test Gustavo$ vi styles.css
+Gustavos-MacBook-Pro:test Gustavo$ git
+usage: git [--version] [--help] [-C <path>] [-c name=value]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone      Clone a repository into a new directory
+   init       Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add        Add file contents to the index
+   mv         Move or rename a file, a directory, or a symlink
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect     Use binary search to find the commit that introduced a bug
+   grep       Print lines matching a pattern
+   log        Show commit logs
+   show       Show various types of objects
+   status     Show the working tree status
+
+grow, mark and tweak your common history
+   branch     List, create, or delete branches
+   checkout   Switch branches or restore working tree files
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   merge      Join two or more development histories together
+   rebase     Reapply commits on top of another base tip
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch      Download objects and refs from another repository
+   pull       Fetch from and integrate with another repository or a local branch
+   push       Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+Gustavos-MacBook-Pro:test Gustavo$ git create
+git: 'create' is not a git command. See 'git --help'.
+
+Did you mean this?
+	reset
+Gustavos-MacBook-Pro:test Gustavo$ git init
+Initialized empty Git repository in /Users/Gustavo/Desktop/test/.git/
+Gustavos-MacBook-Pro:test Gustavo$ commit "create"
+-bash: commit: command not found
+Gustavos-MacBook-Pro:test Gustavo$ git commit "create"
+error: pathspec 'create' did not match any file(s) known to git.
+Gustavos-MacBook-Pro:test Gustavo$ git commit 
+On branch master
+
+Initial commit
+
+Untracked files:
+	.DS_Store
+	index.html
+	styles.css
+
+nothing added to commit but untracked files present
+Gustavos-MacBook-Pro:test Gustavo$ vi index.html 
+Gustavos-MacBook-Pro:test Gustavo$ git commit 
+On branch master
+
+Initial commit
+
+Untracked files:
+	.DS_Store
+	index.html
+	styles.css
+
+nothing added to commit but untracked files present
+Gustavos-MacBook-Pro:test Gustavo$ git commit upload
+error: pathspec 'upload' did not match any file(s) known to git.
+Gustavos-MacBook-Pro:test Gustavo$ git commit 
+On branch master
+
+Initial commit
+
+Untracked files:
+	.DS_Store
+	index.html
+	styles.css
+
+nothing added to commit but untracked files present
+Gustavos-MacBook-Pro:test Gustavo$ push
+-bash: push: command not found
+Gustavos-MacBook-Pro:test Gustavo$ git ush
+git: 'ush' is not a git command. See 'git --help'.
+
+Did you mean this?
+	push
+Gustavos-MacBook-Pro:test Gustavo$ git push
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote repository using
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+Gustavos-MacBook-Pro:test Gustavo$ git commit -m "actualizacion de html"
+On branch master
+
+Initial commit
+
+Untracked files:
+	.DS_Store
+	index.html
+	styles.css
+
+nothing added to commit but untracked files present
+Gustavos-MacBook-Pro:test Gustavo$ ls
+index.html	styles.css
+Gustavos-MacBook-Pro:test Gustavo$ vi styles.css 
+Gustavos-MacBook-Pro:test Gustavo$ vi index.html 
+Gustavos-MacBook-Pro:test Gustavo$ git commit -m "actualizacion de css"
+On branch master
+
+Initial commit
+
+Untracked files:
+	.DS_Store
+	index.html
+	styles.css
+
+nothing added to commit but untracked files present
+Gustavos-MacBook-Pro:test Gustavo$ git log
+fatal: your current branch 'master' does not have any commits yet
+Gustavos-MacBook-Pro:test Gustavo$ git commit -a -m "actualizacion de html"
+On branch master
+
+Initial commit
+
+Untracked files:
+	.DS_Store
+	index.html
+	styles.css
+
+nothing added to commit but untracked files present
+Gustavos-MacBook-Pro:test Gustavo$ git commit -a -m "actualizacion de html"
+On branch master
+
+Initial commit
+
+Untracked files:
+	.DS_Store
+	index.html
+	styles.css
+
+nothing added to commit but untracked files present
+Gustavos-MacBook-Pro:test Gustavo$ git push
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote repository using
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+Gustavos-MacBook-Pro:test Gustavo$ git push index.html 
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream index.html master
+
+Gustavos-MacBook-Pro:test Gustavo$ git commit master
+error: pathspec 'master' did not match any file(s) known to git.
+Gustavos-MacBook-Pro:test Gustavo$ git commit index.html -m "actualizacion de html"
+error: pathspec 'index.html' did not match any file(s) known to git.
+Gustavos-MacBook-Pro:test Gustavo$ git config
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-regex]
+    --get-all             get all values: key [value-regex]
+    --get-regexp          get values for regexp: name-regex [value-regex]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value_regex]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-regex]
+    --unset-all           remove all matches: name [value-regex]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --path                value is a path (file or directory name)
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, command line)
+
+Gustavos-MacBook-Pro:test Gustavo$ git config --local
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-regex]
+    --get-all             get all values: key [value-regex]
+    --get-regexp          get values for regexp: name-regex [value-regex]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value_regex]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-regex]
+    --unset-all           remove all matches: name [value-regex]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --path                value is a path (file or directory name)
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, command line)
+
+Gustavos-MacBook-Pro:test Gustavo$ git config local
+error: key does not contain a section: local
+Gustavos-MacBook-Pro:test Gustavo$ git init
+Reinitialized existing Git repository in /Users/Gustavo/Desktop/test/.git/
+Gustavos-MacBook-Pro:test Gustavo$ git he;p
+git: 'he' is not a git command. See 'git --help'.
+
+Did you mean this?
+	help
+-bash: p: command not found
+Gustavos-MacBook-Pro:test Gustavo$ git help
+usage: git [--version] [--help] [-C <path>] [-c name=value]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone      Clone a repository into a new directory
+   init       Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add        Add file contents to the index
+   mv         Move or rename a file, a directory, or a symlink
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect     Use binary search to find the commit that introduced a bug
+   grep       Print lines matching a pattern
+   log        Show commit logs
+   show       Show various types of objects
+   status     Show the working tree status
+
+grow, mark and tweak your common history
+   branch     List, create, or delete branches
+   checkout   Switch branches or restore working tree files
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   merge      Join two or more development histories together
+   rebase     Reapply commits on top of another base tip
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch      Download objects and refs from another repository
+   pull       Fetch from and integrate with another repository or a local branch
+   push       Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+Gustavos-MacBook-Pro:test Gustavo$ git add index.html 
+Gustavos-MacBook-Pro:test Gustavo$ git add styles.css
+Gustavos-MacBook-Pro:test Gustavo$ git commit - "actualizando index y styles"
+error: pathspec '-' did not match any file(s) known to git.
+error: pathspec 'actualizando index y styles' did not match any file(s) known to git.
+Gustavos-MacBook-Pro:test Gustavo$ git commit -m "actualizando index y styles"
+[master (root-commit) b0ecaa7] actualizando index y styles
+ 2 files changed, 4 insertions(+)
+ create mode 100644 index.html
+ create mode 100644 styles.css
+Gustavos-MacBook-Pro:test Gustavo$ git log
+commit b0ecaa7b38e4876f909a849ae157f06cdd6e9b41
+Author: gumuller83 <83045599+gumuller83@users.noreply.github.com>
+Date:   Thu Jun 3 19:09:28 2021 -0500
+
+    actualizando index y styles
+Gustavos-MacBook-Pro:test Gustavo$ git commit help
+error: pathspec 'help' did not match any file(s) known to git.
+Gustavos-MacBook-Pro:test Gustavo$ git reset
+Gustavos-MacBook-Pro:test Gustavo$ git log
+commit b0ecaa7b38e4876f909a849ae157f06cdd6e9b41
+Author: gumuller83 <83045599+gumuller83@users.noreply.github.com>
+Date:   Thu Jun 3 19:09:28 2021 -0500
+
+    actualizando index y styles
+Gustavos-MacBook-Pro:test Gustavo$ vi index.html 
+Gustavos-MacBook-Pro:test Gustavo$ git commit -m "nuevo update"
+On branch master
+Changes not staged for commit:
+	modified:   index.html
+
+Untracked files:
+	.DS_Store
+
+no changes added to commit
+Gustavos-MacBook-Pro:test Gustavo$ git add index.html 
+Gustavos-MacBook-Pro:test Gustavo$ git commit -m "nuevo update"
+[master a8baa4a] nuevo update
+ 1 file changed, 2 insertions(+)
+Gustavos-MacBook-Pro:test Gustavo$ git log
+commit a8baa4abe8dcc14db99e7f4bd651a40c1f11e516
+Author: gumuller83 <83045599+gumuller83@users.noreply.github.com>
+Date:   Thu Jun 3 19:12:24 2021 -0500
+
+    nuevo update
+
+commit b0ecaa7b38e4876f909a849ae157f06cdd6e9b41
+Author: gumuller83 <83045599+gumuller83@users.noreply.github.com>
+Date:   Thu Jun 3 19:09:28 2021 -0500
+
+    actualizando index y styles
+Gustavos-MacBook-Pro:test Gustavo$ 
+
